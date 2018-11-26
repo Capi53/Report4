@@ -1,6 +1,6 @@
 package jp.ac.uryukyu.ie.e185753;
 
-public class main {
+/*public class main {
     public static void main(String[] args) {
         String str ;
         int result = len(null);
@@ -20,5 +20,30 @@ public class main {
 
         }
     }
+}*/
+
+public class main {
+    public static void main (String[] args){
+        String str = "百二十三";
+        int result = len("百二十三");
+        System.out.println(Integer.parseInt(str));
+    }
+    public static int len (String str){
+        try {
+            int strlen = str.length();
+            System.out.println(strlen);
+            throw new NullPointerException("文字が入力されていません");
+        }catch(NullPointerException N){
+
+            System.out.println(N.getMessage());
+            return 0;
+        }finally{
+            System.out.println("処理終了");
+        }
+
+    }
 }
+
+
+
 
